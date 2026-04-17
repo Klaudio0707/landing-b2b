@@ -1,0 +1,98 @@
+.section {
+  background-color: #050505;
+  padding: 6rem 2rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; 
+  gap: 4rem;
+  align-items: start;
+}
+
+.headerBox {
+  position: sticky;
+  top: 100px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.title span {
+  color: var(--primary); 
+}
+
+.subtitle {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
+  transform: translateX(10px); 
+}
+
+.iconBox {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(242, 122, 33, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.content h3 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: #999;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .headerBox {
+    position: static;
+    text-align: center;
+  }
+}

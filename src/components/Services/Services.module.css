@@ -1,0 +1,231 @@
+.section {
+  background-color: #050505;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem; 
+  max-width: 700px;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.subtitle {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.circleWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.centerLogo {
+  display: none; 
+}
+
+.itemNode {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #fffdfd;
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem;
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  background-color: #09090b;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.orange .iconCircle {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: rgba(242, 122, 33, 0.05);
+}
+
+.blue .iconCircle {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.textBlock h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.logoText{
+  font-size: 10rem;
+} 
+
+.textBlock p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.centerLogo:hover {
+    transition: transform 0.3s ease;
+    scale:1.05;
+    cursor: pointer;
+  }
+
+@media (min-width: 992px) {
+  
+  .circleWrapper {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .centerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background-color: #050505;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: 0 0 0 15px #050505;
+    
+  }
+  .centerLogo:hover {
+    transition: transform 0.3s ease;
+    scale:1.05;
+    cursor: pointer;
+  }
+
+  .logoText {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .itemNode {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px; 
+    background: transparent;
+    border: none;
+    padding: 0;
+    
+    transform: 
+      translate(-50%, -50%) 
+      rotate(var(--angle)) 
+      translate(300px) 
+      rotate(calc(-1 * var(--angle))); 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: z-index 0.3s;
+  }
+  .itemNode:hover {
+    z-index: 100; 
+  }
+  .itemNode:hover .iconCircle {
+    transform: scale(1.25); 
+    background-color: #000; 
+  }
+  .itemNode.orange:hover .iconCircle {
+    box-shadow: 0 0 40px rgba(242, 122, 33, 0.6), inset 0 0 15px rgba(242, 122, 33, 0.2);
+    border-color: var(--primary);
+  }
+  .itemNode.blue:hover .iconCircle {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), inset 0 0 15px rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+  }
+  .itemNode:hover .textBlock h3 {
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    transition: color 0.3s ease;
+  }
+  .iconCircle {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+    background-color: #050505; 
+    border-width: 2px;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8); 
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  }
+  .orange .iconCircle {
+    box-shadow: 0 0 25px rgba(242, 122, 33, 0.2), inset 0 0 10px rgba(242, 122, 33, 0.1);
+  }
+
+  .blue .iconCircle {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2), inset 0 0 10px rgba(59, 130, 246, 0.1);
+  }
+
+  .textBlock h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  }
+
+  .textBlock p {
+    font-size: 0.85rem;
+    color: #888;
+    max-width: 200px; 
+    margin: 0 auto;
+  }
+}
