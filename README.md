@@ -38,6 +38,6 @@ Performance de Borda: Deploy otimizado via Vercel Edge Network.
 🚀 Demonstração
 O projeto está disponível para visualização online:
 
-🔗 [[LINK DA SUA VERCEL AQUI](https://theglobal.vercel.app/)]
+🔗 [[Aplicação](https://theglobal.vercel.app/)]
 
 (Nota: Este é um projeto de demonstração com dados anonimizados para proteção de propriedade intelectual).
