@@ -21,7 +21,7 @@ export function Header() {
       <div className={styles.container}>
         
         <div className={styles.logo}>
-         <a href="/"> the<span className={styles.textOrange}>global</span> </a>
+         <a href="/"> The<span className={styles.textOrange}>Global</span> </a>
         </div>
 
         <nav className={styles.nav}>
